@@ -1,5 +1,5 @@
 #!/bin/bash
-# This script exists to automatomatically run content_updates.py from cron
+# This script exists to automatically run content_updates.py from cron
 # Author: Robert Arkenklo robert@arkenklo.se
 
 # Quit if any command fails
