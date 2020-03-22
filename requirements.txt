@@ -1,2 +1,11 @@
+jupyterlab
 bs4
 requests
+selenium
+sklearn
+graphviz
+pandas
+chromedriver
+
+
+pyvirtualdisplay

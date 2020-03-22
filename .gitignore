@@ -1,3 +1,5 @@
 __pycache__/
 venv/
 content-change-notifier/credentials.json
+env/
+content-change-notifier/env/
