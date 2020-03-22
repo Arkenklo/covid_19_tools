@@ -88,7 +88,7 @@ def get_updates(header, sheet, urls):
     curr_contents = {}
     for url in urls:
         if not url:
-            last_updated.append([''])
+            last_updated.append(False)
             is_updated.append([''])
         else:
             curr_content = BeautifulSoup(requests.get(url).content, 'lxml').body.text
@@ -131,9 +131,9 @@ def notify_slack(urls, updates, is_updated):
     for url in urls:
         row_updated = is_updated.pop(0)
         timestamp = updates.pop(0)
-        if row_updated:
+        if row_updated == True:
             text = text + "Updated at " + str(timestamp[0]) + " " + str(url) + "\n"
     slack.post(text=text)
-    
+
 if __name__ == '__main__':
     main()
